@@ -15,7 +15,9 @@ and open the template in the editor.
             <button id="getcamerabtn" style="font-size: larger">tag et billede</button>
         </div>
         <script>
-            navigator.camera.getPicture(onSuccess, onFail, {quality: 50,
+            
+            $('#getcamerabtn').click(function(){
+                navigator.camera.getPicture(onSuccess, onFail, {quality: 50,
                 destinationType: Camera.DestinationType.FILE_URI});
 
             function onSuccess(imageURI) {
@@ -26,6 +28,8 @@ and open the template in the editor.
             function onFail(message) {
                 alert('Failed because: ' + message);
             }
+            });
+            
         </script>
     </body>
 </html>
