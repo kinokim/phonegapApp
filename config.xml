@@ -1,0 +1,13 @@
+<widget id="com.example.hello" version="0.0.1">
+        <name>Phonegap Kamera App</name>
+        <description>
+		En app som kan tage et billede samt gemme billedet lokalt.
+        </description>
+        <author email="dev@callback.apache.org" href="http://phonegap.com">
+            Apache Cordova Team
+        </author>
+        <content src="index.html" />
+        <access origin="*" />
+		
+		<gap:plugin name="org.apache.cordova.camera" version="0.2.9" />
+    </widget>
