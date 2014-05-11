@@ -15,13 +15,16 @@ and open the template in the editor.
             <button id="getcamerabtn" style="font-size: larger">tag et billede</button>
         </div>
         <script>
-            camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
-            function cameraSuccess(imageURI){
+            navigator.camera.getPicture(onSuccess, onFail, {quality: 50,
+                destinationType: Camera.DestinationType.FILE_URI});
+
+            function onSuccess(imageURI) {
                 var image = document.getElementById('myImage');
                 image.src = imageURI;
             }
-            function cameraError(message){
-                alert('failed because: ' + message);
+
+            function onFail(message) {
+                alert('Failed because: ' + message);
             }
         </script>
     </body>
