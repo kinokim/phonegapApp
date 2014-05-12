@@ -46,14 +46,15 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script>
                     function capturePhoto() {
-                        navigator.camera.getPicture(uploadPhoto, null, {sourceType: 1, quality: 60});
+                        navigator.camera.getPicture(uploadPhoto, null, {sourceType: 1, quality: 60, saveToPhotoAlbum: true});
                     }
                     function uploadPhoto(data) {
                         // this is where you would send the image file to server
 
+
                         //output image to screen
                         cameraPic.src = data;
-                        
+
                         alert(data);
                     }
         </script>
