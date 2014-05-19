@@ -1,64 +1,34 @@
-<!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="css/themes/A.css" />
-        <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
-        <!-- <meta name="format-detection" content="telephone=no" /> -->
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->
-
-        <!-- <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div id="camera">
-            <button onclick="capturePhoto();" id="btn" data-role="btn" data-theme="a">Capture Photo</button>
-            <div>
-                <img id="cameraPic" src="" style="width:auto;height:500px;"/>
-            </div>
-        </div>
-        <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script>
-                function capturePhoto() {
-                    navigator.camera.getPicture(uploadPhoto, null, {sourceType: 1, quality: 60, saveToPhotoAlbum: true, correctOrientation: true});
-                }
-                function uploadPhoto(data) {
-                    // this is where you would send the image file to server
-
-
-                    //output image to screen
-                    cameraPic.src = data;
-
-                    alert(data);
-                }
-        </script>
-        <script type="text/javascript">
-            app.initialize();
-
-            //      $('#takepicture').click(function() {
-            //          var image = camera.getPicture();
-            //          alert("image: " + image);
-            //      });
-        </script>
-    </body>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Mobile: Theme Download</title>
+	<link rel="stylesheet" href="themes/A.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+</head>
+<body>
+	<div data-role="page" data-theme="a">
+		<div data-role="header" data-position="inline">
+			<h1>It Worked!</h1>
+		</div>
+		<div data-role="content" data-theme="a">
+			<p>Your theme was successfully downloaded. You can use this page as a reference for how to link it up!</p>
+			<pre>
+			</pre>
+			<p>This is content color swatch "A" and a preview of a <a href="#" class="ui-link">link</a>.</p>
+			<label for="slider1">Input slider:</label>
+			<input type="range" name="slider1" id="slider1" value="50" min="0" max="100" data-theme="a" />
+			<fieldset data-role="controlgroup"  data-type="horizontal" data-role="fieldcontain">
+			<legend>Cache settings:</legend>
+			<input type="radio" name="radio-choice-a1" id="radio-choice-a1" value="on" checked="checked" />
+			<label for="radio-choice-a1">On</label>
+			<input type="radio" name="radio-choice-a1" id="radio-choice-b1" value="off"  />
+			<label for="radio-choice-b1">Off</label>
+			</fieldset>
+		</div>
+	</div>
+</body>
 </html>
