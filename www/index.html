@@ -64,32 +64,17 @@
                                     navigator.camera.getPicture(uploadPhoto, alertmessage, {sourceType: 1, quality: 60, saveToPhotoAlbum: true, correctOrientation: true});
                                 }
 
-                                function alertmessage(data) {
-                                    $("<div class='ui-loader ui-overlay-shadow ui-body-e ui-corner-all'><h3>" + data + "</h3></div>")
-                                            .css({display: "block",
-                                        opacity: 0.90,
-                                        position: "fixed",
-                                        padding: "7px",
-                                        "text-align": "center",
-                                        width: "270px",
-                                        left: ($(window).width() - 284) / 2,
-                                        top: $(window).height() / 2})
-                                            .appendTo($.mobile.pageContainer).delay(1500)
-                                            .fadeOut(400, function() {
-                                        $(this).remove();
-                                    });
-                                }
-                                    function uploadPhoto(data) {
-                                        // this is where you would send the image file to server
+                                function uploadPhoto(data) {
+                                    // this is where you would send the image file to server
+
+                                    alert("file saved at: \n" + data);
+                                    //output image to screen
+                                    cameraPic.src = data;
 
 
-                                        //output image to screen
-                                        cameraPic.src = data;
-
-                                        var toast = alertmessage(data)
 
 
-                                        //alert(data);
+                                    //alert(data);
                                 }
         </script>
     </body>
