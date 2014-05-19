@@ -37,11 +37,7 @@
             </div>
 
             <div data-role="content">   
-
-
-
                 <ul data-role="listview" data-inset="true">
-
                     <li>
                         <fieldset class="ui-grid-solo">
                             <div class="ui-block-a"><button onclick="capturePhoto();" data-theme="b">Submit</button></div>
@@ -61,7 +57,7 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script>
                                 function capturePhoto() {
-                                    navigator.camera.getPicture(uploadPhoto, alertmessage, {sourceType: 1, quality: 60, saveToPhotoAlbum: true, correctOrientation: true});
+                                    navigator.camera.getPicture(uploadPhoto, null, {sourceType: 1, quality: 60, saveToPhotoAlbum: true, correctOrientation: true});
                                 }
 
                                 function uploadPhoto(data) {
