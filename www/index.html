@@ -83,7 +83,7 @@
                                 
                                 function getGeoLocation(){
                                     alert("beforeGeoLocation");
-                                    navigator.geolocation.getCurrentPosition(geolocsucces, null, { enableHighAccuracy: true});
+                                    navigator.geolocation.getCurrentPosition(geolocsucces, null);
                                 }
                                 function geolocsucces(position){
                                     alert("position: " + position);
