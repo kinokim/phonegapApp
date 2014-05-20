@@ -78,7 +78,7 @@
                                 }
                                 
                                 function getGeoLocation(){
-                                    navigator.geolocation.getCurrentPosition(geolocsucces);
+                                    navigator.geolocation.getCurrentPosition(geolocsucces, null, { enableHighAccuracy: true});
                                 }
                                 function geolocsucces(position){
                                     $("#savedlocationid").html(position);
