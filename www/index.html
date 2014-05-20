@@ -40,12 +40,17 @@
                 <ul data-role="listview" data-inset="true">
                     <li>
                         <fieldset class="ui-grid-solo">
-                            <div class="ui-block-a"><button onclick="capturePhoto();" data-theme="b">Submit</button></div>
+                            <div class="ui-block-a"><button onclick="capturePhoto();" data-theme="b">Tag Billede</button></div>
                         </fieldset>
                     </li>
                     <li>
                         <div class="ui-content">
                             <img id="cameraPic" src="" style="width:80%;height:auto;"/>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="savedlocationid">
+                            
                         </div>
                     </li>
                 </ul>
@@ -69,6 +74,7 @@
                                     //alert(data);
                                     
                                     alert("file saved at: " + data);
+                                    $("#savedlocationid").html(data)
                                 }
         </script>
     </body>
