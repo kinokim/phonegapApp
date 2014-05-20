@@ -72,9 +72,10 @@
                                     //output image to screen
                                     cameraPic.src = data;
                                     //alert(data);
-                                    
-                                    alert("file saved at: " + data);
-                                    $("#savedlocationid").html(data)
+                                    var dataLocation = data.toString();
+                                    dataLocation = dataLocation.subString(26);
+                                    alert("file saved at: " + dataLocation);
+                                    $("#savedlocationid").html(dataLocation)
                                 }
         </script>
     </body>
