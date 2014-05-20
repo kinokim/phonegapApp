@@ -73,7 +73,15 @@
                                     cameraPic.src = data;
                                     //alert(data);
                                     alert("file saved at: " + data.substring(26));
-                                    $("#savedlocationid").html(data.substring(26));
+                                    getGeoLocation();
+                                   // $("#savedlocationid").html(data.substring(26));
+                                }
+                                
+                                function getGeoLocation(){
+                                    navigator.geolocation.getCurrentPosition(geolocsucces);
+                                }
+                                function geolocsucces(position){
+                                    $("#savedlocationid").html(position);
                                 }
         </script>
     </body>
