@@ -36,7 +36,7 @@
                 <img id="cameraPic" src="" style="width:80%;height:auto;"/>
             </div>
 			<div id="savedlocationid">
-				her skal gps shit stå.. 
+				her skal gps shit staa.. 
 			</div>
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
@@ -71,7 +71,7 @@
                                     alert("position coords: " + position.coords);
                                     alert("position coords latitude: " + position.coords.latitude);
                                     alert("position timestamp: " + position.timestamp);
-                                    $("#savedlocationid").html("latitude: " + position.coords.latitude + " longitude: " + position.coords.longitude + " altitude: " + position.coords.altitude);
+                                    $("#savedlocationid").text("latitude: " + position.coords.latitude + " longitude: " + position.coords.longitude);
                                     //"Timestamp: " + position.timestamp);
                                 }
         </script>
