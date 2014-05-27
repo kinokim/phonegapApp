@@ -27,21 +27,26 @@
         <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->
 
         <!-- <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
         <title>Hello World</title>
     </head>
     <body>
+	<div>
         <div id="camera">
-            <button onclick="capturePhoto();">Capture Photo</button>
-            <div>
+			<div>
+				<button onclick="capturePhoto();">Capture Photo</button>
+			</div>
+			<div>
                 <img id="cameraPic" src="" style="width:80%;height:auto;"/>
             </div>
 			<div id="savedlocationid">
 				her skal gps shit staa.. 
 			</div>
         </div>
-        <script type="text/javascript" src="phonegap.js"></script>
+    </div>
+		<script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-		<script>		
+        <script>
                                 function capturePhoto() {
                                     navigator.camera.getPicture(uploadPhoto, null, {sourceType: 1, quality: 60, saveToPhotoAlbum: true, correctOrientation: true});
                                 }
@@ -63,15 +68,15 @@
                                 }
                                 
                                 function getGeoLocation(){
-                                    alert("beforeGeoLocation");
+                                   // alert("beforeGeoLocation");
                                     navigator.geolocation.getCurrentPosition(geolocsucces, null);
                                 }
                                 function geolocsucces(position){
-                                    alert("position: " + position);
-                                    alert("position coords: " + position.coords);
-                                    alert("position coords latitude: " + position.coords.latitude);
-                                    alert("position timestamp: " + position.timestamp);
-                                    $("#savedlocationid").text("latitude: " + position.coords.latitude + " longitude: " + position.coords.longitude);
+                                    //alert("position: " + position);
+                                    //alert("position coords: " + position.coords);
+                                    //alert("position coords latitude: " + position.coords.latitude);
+                                    //alert("position timestamp: " + position.timestamp);
+                                    $("#savedlocationid").html("latitude: " + position.coords.latitude + " longitude: " + position.coords.longitude + " altitude: " + position.coords.altitude);
                                     //"Timestamp: " + position.timestamp);
                                 }
         </script>
