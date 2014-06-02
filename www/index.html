@@ -56,28 +56,18 @@
                                 }
 
                                 function uploadPhoto(data) {
-                                    // this is where you would send the image file to server
-
-                                    
-                                    //output image to screen
+´´
+									getGeoLocation();
                                     cameraPic.src = data;
-                                    //alert(data);
                                     // alert("file saved at: " + data.substring(26));
-                                    getGeoLocation();
-                                   // $("#savedlocationid").html(data.substring(26));
                                 }
                                 
                                 function getGeoLocation(){
-                                   // alert("beforeGeoLocation");
                                     navigator.geolocation.getCurrentPosition(geolocsucces, null);
                                 }
                                 function geolocsucces(position){
-                                    //alert("position: " + position);
-                                    //alert("position coords: " + position.coords);
-                                    //alert("position coords latitude: " + position.coords.latitude);
-                                    //alert("position timestamp: " + position.timestamp);
+                                    
                                     $("#savedlocationid").html("latitude: " + position.coords.latitude + " longitude: " + position.coords.longitude);
-                                    //"Timestamp: " + position.timestamp);
                                 }
         </script>
     </body>
